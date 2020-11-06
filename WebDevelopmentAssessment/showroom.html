@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom</title>
+    <script>
+        function selectDevice(){
+            lap='Lenovo~Sony~Hp';
+            laptemp=lap.split('~').join("<br>");
+            mob='iphone~Samsung~Sony';
+            mobtemp=mob.split('~').join("<br");
+            tv='LG~Sony~Mi';
+            tvtemp=tv.split('~').join("<br>");
+            var choose=document.getElementById("mydevice");
+
+            if(choose.value=='Laptop'){
+                document.getElementById("mystore").innerHTML=laptemp;
+            }
+            else if(choose.value=='Mobile'){
+                document.getElementById("mystore").innerHTML=mobtemp;
+            }
+            else if(choose.value=='TV'){
+                document.getElementById("mystore").innerHTML=tvtemp;
+            }
+            else{
+                document.getElementById("mystore").innerHTML="";
+            }
+        }
+    </script>
+</head>
+<body>
+    Select Device
+    <select name="device" id="mydevice" onclick="selectDevice()">
+        <option value="select">--select--</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Mobile">Mobile</option>
+        <option value="TV">TV</option>
+    </select>
+    <div style="background-color: turquoise;color: tomato;" id="mystore"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

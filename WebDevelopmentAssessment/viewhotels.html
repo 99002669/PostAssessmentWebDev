@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <script>
+        function selectHotelBType(){
+            veg='Hotel Vistara~Hotel pure veg';
+            vegtemp=veg.split('~').join("<br>");
+            nonveg='Chinese Hotel~Non veg Hotel';
+            nonvegtemp=nonveg.split('~').join("<br");
+            var tp=document.getElementById("vegnon");
+
+            if(tp.value=='Veg'){
+                document.getElementById("tdivs").innerHTML=vegtemp;
+            }
+            else if(tp.value=='NonVeg'){
+                document.getElementById("tdivs").innerHTML=nonvegtemp;
+            }
+            else{
+                document.getElementById("tdivs").innerHTML="";
+            }
+        }
+
+        function selectHotelByCuisine(){
+            chinese='Chinese tadka~Happy da dhabba';
+            ctemp=chinese.split('~').join("<br>");
+            indian='Hotal vaibav~Hotel Taj';
+            itemp=indian.split('~').join("<br");
+            var str=document.getElementById("mycus");
+
+            if(str.value=='Chinese'){
+                document.getElementById("cdivs").innerHTML=ctemp;
+            }
+            else if(str.value=='Indian'){
+                document.getElementById("cdivs").innerHTML=itemp;
+            }
+            else{
+                document.getElementById("cdivs").innerHTML="";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    Select HotelsbyType
+    <select name="vegnonveg" id="vegnon" onclick="selectHotelByType()">
+        <option value="select">--select--</option>
+        <option value="Veg">Veg</option>
+        <option value="NonVeg">NonVeg</option>
+    </select>
+
+
+    <div style="background-color: turquoise;color: tomato;" id="tdivs"></div>
+
+    <br>
+    <br>
+    <br>
+
+    Select HotelsbyCuisine
+    <select name="cuisine" id="mycus" onclick="selectHotelByCuisine()">
+        <option value="select">--select--</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Indian">Indian</option>
+    </select>
+    <div style="background-color: turquoise;color: tomato;" id="cdivs"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
